@@ -1,0 +1,25 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px">
+
+    <mat-card *ngFor="let action of actions" fxFlex>
+
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{action.name | uppercase}} <label class="label">{{action.rating}}</label></h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{action.image}} alt={{action.name}} height="450" width="500">
+        <mat-card-content>
+            <h2><span><strong>Director: </strong></span> {{action.director}}</h2>
+            <h3><span><strong>Starring: </strong></span> {{action.starring}}</h3>
+            <h3><span><strong>Genre: </strong></span> {{action.genres}}</h3>
+            <p>
+                <span> <span><strong>Description: </strong></span>{{action.description}}</span>
+            </p>
+        </mat-card-content>
+
+
+    </mat-card>
+
+
+</div>

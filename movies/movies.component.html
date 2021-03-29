@@ -1,0 +1,25 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px">
+
+    <mat-card class="m" *ngFor="let movie of movies" height="500" fxFlex.gdArea.lt-md=25%>
+
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{movie.name | uppercase}} <label class="label">{{movie.rating}}</label></h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{movie.image}} alt={{movie.name}} height="450" width="500">
+        <mat-card-content>
+            <h2><span><strong>Director: </strong></span> {{movie.director}}</h2>
+            <h3><span><strong>Starring: </strong></span> {{movie.starring}}</h3>
+            <h3><span><strong>Genre: </strong></span> {{movie.genres}}</h3>
+            <p>
+                <span> <span><strong>Description: </strong></span>{{movie.description}}</span>
+            </p>
+        </mat-card-content>
+
+
+    </mat-card>
+
+
+</div>
